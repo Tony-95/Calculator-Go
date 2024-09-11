@@ -1,11 +1,11 @@
 package main
-import "/sujet/calc"
 
 import (
 	"bufio"
 	"fmt"
 	"os"
-	"calc" // Importe le package "calc" qui contient les autres fonctionnalités
+
+	"github.com/Tony-95/Calculator-Go/calc"
 )
 
 func main() {
@@ -14,7 +14,7 @@ func main() {
 
 	// Scanner pour recevoir les entrées de l'utilisateur
 	scanner := bufio.NewScanner(os.Stdin)
-	fmt.Println("Bienvenue dans le calculateur. Tapez 'exit' pour quitter.")
+	fmt.Println("Bienvenue dans le calculateur. Tapez 'quitter' pour quitter.")
 
 	for {
 		fmt.Print("calc> ")
@@ -22,7 +22,7 @@ func main() {
 		input := scanner.Text()
 
 		// Condition de sortie
-		if input == "exit" {
+		if input == "quitter" {
 			break
 		}
 
